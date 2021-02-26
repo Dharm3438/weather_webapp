@@ -1,0 +1,13 @@
+from django.db import models
+class City(models.Model):
+	name = models.CharField(max_length=25)
+	temperature = models.CharField(max_length=25)
+	description = models.TextField()
+
+	def __str__(self):
+		return self.name
+
+	class Meta:
+		verbose_name_plural = 'cities'
+
+# Create your models here.
